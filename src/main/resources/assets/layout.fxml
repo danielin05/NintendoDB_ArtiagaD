@@ -13,7 +13,7 @@
    <children>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: lightGreen;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <VBox alignment="CENTER" prefHeight="432.0" prefWidth="204.0" style="-fx-border-color: lightGreen; -fx-border-width: 5px; -fx-background-color: white;" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="427.0" prefWidth="264.0" style="-fx-border-color: lightGreen; -fx-border-width: 5px; -fx-background-color: white;" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets />
                </BorderPane.margin>
@@ -21,10 +21,10 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <children>
-                  <ChoiceBox fx:id="choiceTypes" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="174.0" />
+                  <ChoiceBox fx:id="choiceTypes" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="269.0" />
                   <ScrollPane prefHeight="349.0" prefWidth="174.0" VBox.vgrow="ALWAYS">
                      <content>
-                        <VBox fx:id="listItems" prefHeight="347.0" prefWidth="172.0" />
+                        <VBox fx:id="listItems" prefHeight="370.0" prefWidth="191.0" />
                      </content>
                   </ScrollPane>
                </children>
