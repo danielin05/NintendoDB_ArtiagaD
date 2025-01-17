@@ -18,21 +18,21 @@
     "any": 1996,
     "tipus": "RPG (Role-Playing Game)",
     "descripcio": "Pokémon és una sèrie de jocs on els jugadors capturen i entrenen criatures conegudes com a Pokémon. L'objectiu és arribar a ser un Mestre Pokémon, derrotant altres entrenadors i completant la Pokèdex atrapant totes les diferents espècies de Pokémon.",
-    "imatge": "game_pred.jpeg"
+    "imatge": "game_pred.png"
     },
     {
     "nom": "Mario Kart 64",
     "any": 1996,
     "tipus": "Carreres",
     "descripcio": "Mario Kart és una sèrie de jocs de carreres amb personatges de l'univers de Mario. Els jugadors competeixen utilitzant diversos objectes i armes per guanyar avantatges i arribar primer a la línia de meta.",
-    "imatge": "game_smk.jpeg"
+    "imatge": "game_smk.png"
     },
     {
     "nom": "Metroid",
     "any": 1986,
     "tipus": "Acció-Aventura",
     "descripcio": "Metroid és una sèrie que segueix les aventures de Samus Aran, una cazadora de recompenses espacial. Els jocs combinen elements d'exploració, acció i puzles, amb un focus en l'ambientació de ciència-ficció.",
-    "imatge": "game_metroid.jpeg"
+    "imatge": "game_metroid.png"
     },
     {
     "nom": "Pikmin",

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="381.0" prefWidth="573.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.controllers.objectController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="381.0" prefWidth="573.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="381.0" prefWidth="356.0">
+               <children>
+                  <ImageView fx:id="image" fitHeight="224.0" fitWidth="276.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="381.0" prefWidth="424.0">
+               <children>
+                  <Label fx:id="title" text="Title">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="270.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="type" text="Type" textAlignment="CENTER">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="year" text="Year" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="description" text="Game description" wrapText="true">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="27.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+ </AnchorPane>
