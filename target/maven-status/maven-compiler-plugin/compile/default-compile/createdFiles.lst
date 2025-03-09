@@ -1,6 +1,7 @@
 com\project\Main.class
+com\project\controllers\objectController.class
 com\project\controllers\ListController.class
 com\project\Main$1.class
 com\project\controllers\MainController.class
-com\project\controllers\objectController.class
+com\project\controllers\MobileController.class
 com\project\UtilsViews.class

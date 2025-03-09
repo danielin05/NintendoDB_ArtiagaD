@@ -10,13 +10,15 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     final int WINDOW_WIDTH = 900;
-    final int WINDOW_HEIGHT = 600;
+    final int WINDOW_HEIGHT = 620;
 
     @Override
     public void start(Stage stage) throws Exception {
 
         UtilsViews.parentContainer.setStyle("-fx-font: 14 arial;");
         UtilsViews.addView(getClass(), "Desktop", "/assets/layout.fxml");
+        UtilsViews.addView(getClass(), "Mobile", "/assets/phoneLayout.fxml");
+        UtilsViews.addView(getClass(), "MobileInfo", "/assets/phoneInfoLayout.fxml");
         
         Scene scene = new Scene(UtilsViews.parentContainer);
 

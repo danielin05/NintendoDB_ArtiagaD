@@ -23,11 +23,12 @@
             </VBox>
             <VBox alignment="CENTER_LEFT" prefHeight="381.0" prefWidth="424.0">
                <children>
-                  <Label fx:id="title" text="Title">
+                  <Label fx:id="titleGame" text="Title">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
                   </Label>
+
                   <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="270.0" spacing="20.0">
                      <children>
                         <Label fx:id="type" text="Type" textAlignment="CENTER">

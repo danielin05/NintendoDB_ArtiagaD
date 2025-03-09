@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
@@ -16,6 +17,8 @@ public class objectController {
     private ImageView image = new ImageView();
     @FXML 
     private Text title = new Text();
+    @FXML
+    private Label titleGame = new Label();
     @FXML
     private Label date = new Label();
     @FXML
@@ -39,7 +42,7 @@ public class objectController {
     
         title.setText(console.getString("nom"));
         date.setText(console.getString("data"));
-        color.setStyle("-fx-fill: "+console.getString("color"));
+        color.setFill(Color.web(console.getString("color")));
         processor.setText(console.getString("procesador"));
         soldUnits.setText(String.valueOf(console.getInt("venudes")));
     }
@@ -48,7 +51,7 @@ public class objectController {
         try{
             URL imageURL = getClass().getResource("/assets/images/"+game.getString("imatge"));
             image.setImage(new Image(imageURL.toString()));
-            title.setText(game.getString("nom"));
+            titleGame.setText(game.getString("nom"));
             year.setText(String.valueOf(game.getInt("any")));
             type.setText(game.getString("tipus"));
             description.setText(game.getString("descripcio"));
@@ -63,7 +66,7 @@ public class objectController {
 
         this.title.setText(info.getString("nom"));
 
-        this.color.setStyle("-fx-fill: "+info.getString("color"));;
+        color.setFill(Color.web(info.getString("color")));
 
         this.game.setText(info.getString("nom_del_videojoc"));
     }

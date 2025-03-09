@@ -1,23 +1,15 @@
 package com.project.controllers;
 
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 
 import java.io.*;
 import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
@@ -30,13 +22,7 @@ public class MainController implements Initializable {
     @FXML
     private VBox listItems = new VBox();
     @FXML
-    private VBox mobileListItems = new VBox();
-
-    @FXML
     private VBox contentBox = new VBox();
-    @FXML
-    private Button charButton = new Button();
-
     @FXML
     private ChoiceBox<String> choiceTypes = new ChoiceBox<>();
 
@@ -87,9 +73,6 @@ public class MainController implements Initializable {
 
                 listController.setText(((JSONObject)itemObj).getString("nom"));
                 URL characterImage = getClass().getResource("/assets/images/"+((JSONObject)itemObj).getString("imatge"));
-                
-                System.out.println(itemObj);
-                System.out.println(characterImage);
 
                 listController.setPhoto(characterImage);
 
@@ -116,9 +99,9 @@ public class MainController implements Initializable {
         contentBox.getChildren().clear();
 
         try{
-            if(choiceTypes.getValue()=="Personatges"){
+            if(choiceTypes.getValue().equals("Personatges")){
 
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/layouts/charInfoLayout.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/charInfoLayout.fxml"));
 
                 Parent charLayout = loader.load();
                 objectController charController = loader.getController();
@@ -126,16 +109,15 @@ public class MainController implements Initializable {
                 charController.setContentCharacter(itemInfo);
 
                 contentBox.getChildren().add(charLayout);
-            }else if(choiceTypes.getValue()=="Jocs"){
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/layouts/gameInfoLayout.fxml"));
+            }else if(choiceTypes.getValue().equals("Jocs")){
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/gameInfoLayout.fxml"));
                 Parent gameLayout = loader.load();
                 objectController gameController = loader.getController();
-
                 gameController.setContentGame(itemInfo);
 
                 contentBox.getChildren().add(gameLayout);
-            }else if(choiceTypes.getValue()=="Consoles"){
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/layouts/consoleInfoLayout.fxml"));
+            }else if(choiceTypes.getValue().equals("Consoles")){
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/consoleInfoLayout.fxml"));
                 Parent consoleLayout = loader.load();
                 objectController consoleController = loader.getController();
 
@@ -147,6 +129,8 @@ public class MainController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    
     
 
 

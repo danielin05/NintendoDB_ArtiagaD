@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxWidth="1.7976931348623157E308" prefHeight="185.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.controllers.ListController">
+   <children>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="185.0" prefWidth="320.0" spacing="10.0" style="-fx-border-color: lightGreen; -fx-border-width: 2;">
+         <children>
+            <ImageView fx:id="photo" fitHeight="91.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" />
+            <StackPane prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: lightGreen;">
+               <children>
+                  <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-background-color: red;" text="Text" textAlignment="CENTER" wrappingWidth="206.75">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </children>
+ </AnchorPane>

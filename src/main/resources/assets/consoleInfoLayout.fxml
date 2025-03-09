@@ -58,7 +58,7 @@
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="processor" text="processor" />
+                              <Label fx:id="processor" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="92.0" text="processor" textAlignment="CENTER" />
                            </children>
                         </VBox>
                      </children>
