@@ -97,7 +97,7 @@ public class MobileInfoLayout {
         try{
             if(choiceTypes.getValue().equals("Personatges")){
                 System.out.println("HOLA MOB");
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/charInfoLayout.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/mobileCharInfoLayout.fxml"));
                 Parent charLayout = loader.load();
                 DesktopInfoLayout charController = loader.getController();
                 charController.setContentCharacter(itemInfo);
@@ -123,7 +123,7 @@ public class MobileInfoLayout {
             }else if(choiceTypes.getValue().equals("Jocs")){
 
                 UtilsViews.setViewAnimating("MobileInfo");
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/gameInfoLayout.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/mobileGameInfoLayout.fxml"));
                 Parent gameLayout = loader.load();
                 DesktopInfoLayout gameController = loader.getController();
                 gameController.setContentGame(itemInfo);
@@ -148,7 +148,7 @@ public class MobileInfoLayout {
             }else if(choiceTypes.getValue().equals("Consoles")){
 
                 UtilsViews.setViewAnimating("MobileInfo");
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/consoleInfoLayout.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/mobileConsoleInfoLayout.fxml"));
                 Parent consoleLayout = loader.load();
                 DesktopInfoLayout consoleController = loader.getController();
                 consoleController.setContentConsole(itemInfo);
