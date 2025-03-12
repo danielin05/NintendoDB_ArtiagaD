@@ -1,7 +1,9 @@
-com\project\Main.class
-com\project\controllers\objectController.class
-com\project\controllers\ListController.class
-com\project\Main$1.class
-com\project\controllers\MainController.class
-com\project\controllers\MobileController.class
-com\project\UtilsViews.class
+com/project/controllers/MobileInfoLayout.class
+com/project/controllers/MobileInfoController.class
+com/project/UtilsViews.class
+com/project/Main.class
+com/project/controllers/ListController.class
+com/project/controllers/MobileController.class
+com/project/Main$1.class
+com/project/controllers/DesktopInfoLayout.class
+com/project/controllers/DesktopController.class

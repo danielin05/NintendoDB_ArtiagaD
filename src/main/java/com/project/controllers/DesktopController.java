@@ -17,7 +17,7 @@ import java.util.Scanner;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class MainController implements Initializable {
+public class DesktopController implements Initializable {
     
     @FXML
     private VBox listItems = new VBox();
@@ -104,7 +104,7 @@ public class MainController implements Initializable {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/charInfoLayout.fxml"));
 
                 Parent charLayout = loader.load();
-                objectController charController = loader.getController();
+                DesktopInfoLayout charController = loader.getController();
 
                 charController.setContentCharacter(itemInfo);
 
@@ -112,14 +112,14 @@ public class MainController implements Initializable {
             }else if(choiceTypes.getValue().equals("Jocs")){
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/gameInfoLayout.fxml"));
                 Parent gameLayout = loader.load();
-                objectController gameController = loader.getController();
+                DesktopInfoLayout gameController = loader.getController();
                 gameController.setContentGame(itemInfo);
 
                 contentBox.getChildren().add(gameLayout);
             }else if(choiceTypes.getValue().equals("Consoles")){
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/consoleInfoLayout.fxml"));
                 Parent consoleLayout = loader.load();
-                objectController consoleController = loader.getController();
+                DesktopInfoLayout consoleController = loader.getController();
 
                 consoleController.setContentConsole(itemInfo);
 

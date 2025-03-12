@@ -99,114 +99,12 @@ public class MobileController implements Initializable {
         
     }
 
-    @FXML
-    private void returnAction() {
-        UtilsViews.setViewAnimating("Mobile");
-    }    
+   
 
     private void itemSelected(Parent item, JSONObject itemInfo){
-        // Eliminem la selecció de tots els elements
-        for(Node elem : listItems.getChildren()){
-            elem.setStyle("-fx-background-color: white;");
-        }
+        MobileInfoLayout controller = (MobileInfoLayout) UtilsViews.getController("MobileInfo");
+        controller.initInfo(choiceTypes, itemInfo);
+        UtilsViews.setViewAnimating("MobileInfo");
 
-        // Seleccionem l'element
-        item.setStyle("-fx-background-color: lightgray;");
-
-        infoLayout.getChildren().clear();
-        System.out.println("infoLayout visible? " + infoLayout.isVisible());
-        System.out.println("rootPane visible? " + rootPane.isVisible());
-
-        System.out.println("infoLayout Parent antes de agregar contenido: " + infoLayout.getParent());
-        System.out.println("rootPane Center: " + rootPane.getCenter());
-
-        if (rootPane.getCenter() == null || rootPane.getCenter() != infoLayout) {
-            rootPane.setCenter(infoLayout);
-        }
-        
-        System.out.println("infoLayout Parent despues de la reinsercion: " + infoLayout.getParent());
-        System.out.println("rootPane Center: " + rootPane.getCenter());
-
-        try{
-            if(choiceTypes.getValue().equals("Personatges")){
-
-                UtilsViews.setViewAnimating("MobileInfo");
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/charInfoLayout.fxml"));
-                Parent charLayout = loader.load();
-                objectController charController = loader.getController();
-                charController.setContentCharacter(itemInfo);
-                
-                System.out.println("infoLayout visible? " + infoLayout.isVisible());
-                System.out.println("Antes de agregar: " + infoLayout.getChildren().size());
-                infoLayout.getChildren().add(charLayout);
-
-                infoLayout.setVisible(true);
-                infoLayout.setManaged(true);
-                infoLayout.requestLayout();
-                
-                System.out.println("infoLayout Parent: " + infoLayout.getParent());
-
-                // infoLayout.getParent().requestLayout(); // Si el VBox está en otro contenedor, también lo refrescamos
-                System.out.println("Contenido añadido: " + infoLayout.getChildren().get(0));
-                System.out.println("infoLayout Parent: " + infoLayout.getParent());
-
-                System.out.println("Después de agregar: " + infoLayout.getChildren().size());
-                System.out.println("infoLayout visible? " + infoLayout.isVisible());
-
-
-            }else if(choiceTypes.getValue().equals("Jocs")){
-
-                UtilsViews.setViewAnimating("MobileInfo");
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/gameInfoLayout.fxml"));
-                Parent gameLayout = loader.load();
-                objectController gameController = loader.getController();
-                gameController.setContentGame(itemInfo);
-                
-                System.out.println("infoLayout visible? " + infoLayout.isVisible());
-                System.out.println("Antes de agregar: " + infoLayout.getChildren().size());
-                infoLayout.getChildren().add(gameLayout);
-
-                infoLayout.setVisible(true);
-                infoLayout.setManaged(true);
-                infoLayout.requestLayout();
-                
-                System.out.println("infoLayout Parent: " + infoLayout.getParent());
-
-                // infoLayout.getParent().requestLayout(); // Si el VBox está en otro contenedor, también lo refrescamos
-                System.out.println("Contenido añadido: " + infoLayout.getChildren().get(0));
-                System.out.println("infoLayout Parent: " + infoLayout.getParent());
-
-                System.out.println("Después de agregar: " + infoLayout.getChildren().size());
-                System.out.println("infoLayout visible? " + infoLayout.isVisible());
-
-            }else if(choiceTypes.getValue().equals("Consoles")){
-
-                UtilsViews.setViewAnimating("MobileInfo");
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/assets/consoleInfoLayout.fxml"));
-                Parent consoleLayout = loader.load();
-                objectController consoleController = loader.getController();
-                consoleController.setContentConsole(itemInfo);
-                
-                System.out.println("infoLayout visible? " + infoLayout.isVisible());
-                System.out.println("Antes de agregar: " + infoLayout.getChildren().size());
-                infoLayout.getChildren().add(consoleLayout);
-                
-                infoLayout.setVisible(true);
-                infoLayout.setManaged(true);
-                infoLayout.requestLayout();
-                
-                System.out.println("infoLayout Parent: " + infoLayout.getParent());
-                
-                // infoLayout.getParent().requestLayout(); // Si el VBox está en otro contenedor, también lo refrescamos
-                System.out.println("Contenido añadido: " + infoLayout.getChildren().get(0));
-                System.out.println("infoLayout Parent: " + infoLayout.getParent());
-
-                System.out.println("Después de agregar: " + infoLayout.getChildren().size());
-                System.out.println("infoLayout visible? " + infoLayout.isVisible());
-
-            }
-        }catch(IOException e){
-            e.printStackTrace();
-        }
     }
 }
